@@ -1,0 +1,331 @@
+CRITICAL - 2025-05-01 18:37:41 --> ErrorException: Cannot redeclare App\Controllers\AuthController::showRegisterForm()
+[Method: GET, Route: auth/register]
+in APPPATH\Controllers\AuthController.php on line 51.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-05-01 18:40:10 --> ErrorException: Cannot redeclare App\Controllers\AuthController::showRegisterForm()
+[Method: GET, Route: auth/register]
+in APPPATH\Controllers\AuthController.php on line 51.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-05-01 18:40:45 --> ErrorException: Cannot redeclare App\Controllers\AuthController::showLoginForm()
+[Method: GET, Route: auth/register]
+in APPPATH\Controllers\AuthController.php on line 51.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-05-01 18:44:21 --> ParseError: syntax error, unexpected token "\", expecting "{"
+[Method: POST, Route: auth/saveRegister]
+in APPPATH\Models\UserModel.php on line 2.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\c4\\app\\Models\\UserModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\UserModel')
+ 3 APPPATH\Controllers\AuthController.php(22): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\UserModel')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AuthController->saveRegister()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-05-01 18:44:59 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\xampp\htdocs\c4\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\c4\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), '', 3306, '', 0)
+#1 C:\xampp\htdocs\c4\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\c4\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\c4\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\xampp\htdocs\c4\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\c4\system\BaseModel.php(839): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\c4\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\c4\app\Controllers\AuthController.php(29): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\c4\system\CodeIgniter.php(933): App\Controllers\AuthController->saveRegister()
+#9 C:\xampp\htdocs\c4\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#10 C:\xampp\htdocs\c4\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\c4\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\c4\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\c4\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\xampp\htdocs\c4\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp\htdocs\c4\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\c4\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\c4\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#3 C:\xampp\htdocs\c4\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#4 C:\xampp\htdocs\c4\system\BaseModel.php(839): CodeIgniter\Model->doInsert(Array)
+#5 C:\xampp\htdocs\c4\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#6 C:\xampp\htdocs\c4\app\Controllers\AuthController.php(29): CodeIgniter\Model->insert(Array)
+#7 C:\xampp\htdocs\c4\system\CodeIgniter.php(933): App\Controllers\AuthController->saveRegister()
+#8 C:\xampp\htdocs\c4\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#9 C:\xampp\htdocs\c4\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\c4\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\c4\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\c4\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-05-01 18:44:59 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+[Method: POST, Route: auth/saveRegister]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`username`, `password`) VALUES (:username:, :password:)', [...], false)
+ 3 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 4 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 5 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 6 APPPATH\Controllers\AuthController.php(29): CodeIgniter\Model->insert([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AuthController->saveRegister()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-05-01 18:46:27 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\xampp\htdocs\c4\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\c4\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), '', 3306, '', 0)
+#1 C:\xampp\htdocs\c4\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\c4\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\c4\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\xampp\htdocs\c4\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\c4\system\BaseModel.php(839): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\c4\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\c4\app\Controllers\AuthController.php(29): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\c4\system\CodeIgniter.php(933): App\Controllers\AuthController->saveRegister()
+#9 C:\xampp\htdocs\c4\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#10 C:\xampp\htdocs\c4\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\c4\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\c4\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\c4\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\xampp\htdocs\c4\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp\htdocs\c4\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\c4\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\c4\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#3 C:\xampp\htdocs\c4\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#4 C:\xampp\htdocs\c4\system\BaseModel.php(839): CodeIgniter\Model->doInsert(Array)
+#5 C:\xampp\htdocs\c4\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#6 C:\xampp\htdocs\c4\app\Controllers\AuthController.php(29): CodeIgniter\Model->insert(Array)
+#7 C:\xampp\htdocs\c4\system\CodeIgniter.php(933): App\Controllers\AuthController->saveRegister()
+#8 C:\xampp\htdocs\c4\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#9 C:\xampp\htdocs\c4\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\c4\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\c4\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\c4\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-05-01 18:46:27 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+[Method: POST, Route: auth/saveRegister]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`username`, `password`) VALUES (:username:, :password:)', [...], false)
+ 3 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 4 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 5 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 6 APPPATH\Controllers\AuthController.php(29): CodeIgniter\Model->insert([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AuthController->saveRegister()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-01 18:48:19 --> ErrorException: require_once(C:\xampp\htdocs\c4\app\Libraries/JWT/JWT.php): Failed to open stream: No such file or directory
+[Method: POST, Route: auth/doLogin]
+in APPPATH\Helpers\jwt_helper.php on line 2.
+ 1 APPPATH\Helpers\jwt_helper.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'require_once(C:\\xampp\\htdocs\\c4\\app\\Libraries/JWT/JWT.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\c4\\app\\Helpers\\jwt_helper.php', 2)
+ 2 APPPATH\Helpers\jwt_helper.php(2): require_once()
+ 3 SYSTEMPATH\Common.php(643): include_once('C:\\xampp\\htdocs\\c4\\app\\Helpers\\jwt_helper.php')
+ 4 APPPATH\Controllers\AuthController.php(35): helper([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AuthController->doLogin()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-01 18:49:34 --> ErrorException: require_once(C:\xampp\htdocs\c4\app\../Libraries/JWT/JWT.php): Failed to open stream: No such file or directory
+[Method: POST, Route: auth/doLogin]
+in APPPATH\Helpers\jwt_helper.php on line 2.
+ 1 APPPATH\Helpers\jwt_helper.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'require_once(C:\\xampp\\htdocs\\c4\\app\\../Libraries/JWT/JWT.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\c4\\app\\Helpers\\jwt_helper.php', 2)
+ 2 APPPATH\Helpers\jwt_helper.php(2): require_once()
+ 3 SYSTEMPATH\Common.php(643): include_once('C:\\xampp\\htdocs\\c4\\app\\Helpers\\jwt_helper.php')
+ 4 APPPATH\Controllers\AuthController.php(35): helper([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AuthController->doLogin()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-01 18:49:51 --> ErrorException: require_once(C:\xampp\htdocs\c4\app\./Libraries/JWT/JWT.php): Failed to open stream: No such file or directory
+[Method: POST, Route: auth/doLogin]
+in APPPATH\Helpers\jwt_helper.php on line 2.
+ 1 APPPATH\Helpers\jwt_helper.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'require_once(C:\\xampp\\htdocs\\c4\\app\\./Libraries/JWT/JWT.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\c4\\app\\Helpers\\jwt_helper.php', 2)
+ 2 APPPATH\Helpers\jwt_helper.php(2): require_once()
+ 3 SYSTEMPATH\Common.php(643): include_once('C:\\xampp\\htdocs\\c4\\app\\Helpers\\jwt_helper.php')
+ 4 APPPATH\Controllers\AuthController.php(35): helper([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AuthController->doLogin()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-01 18:50:46 --> Error: Interface "Firebase\JWT\JWTExceptionWithPayloadInterface" not found
+[Method: POST, Route: auth/doLogin]
+in APPPATH\Libraries\ExpiredException.php on line 5.
+ 1 APPPATH\Helpers\jwt_helper.php(3): require_once()
+ 2 SYSTEMPATH\Common.php(643): include_once('C:\\xampp\\htdocs\\c4\\app\\Helpers\\jwt_helper.php')
+ 3 APPPATH\Controllers\AuthController.php(35): helper([...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AuthController->doLogin()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-01 18:51:35 --> Error: Interface "Firebase\JWT\JWTExceptionWithPayloadInterface" not found
+[Method: POST, Route: auth/doLogin]
+in APPPATH\Libraries\ExpiredException.php on line 5.
+ 1 APPPATH\Helpers\jwt_helper.php(3): require_once()
+ 2 SYSTEMPATH\Common.php(643): include_once('C:\\xampp\\htdocs\\c4\\app\\Helpers\\jwt_helper.php')
+ 3 APPPATH\Controllers\AuthController.php(35): helper([...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AuthController->doLogin()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-01 18:56:36 --> Error: Interface "Firebase\JWT\JWTExceptionWithPayloadInterface" not found
+[Method: POST, Route: auth/doLogin]
+in APPPATH\Libraries\ExpiredException.php on line 5.
+ 1 APPPATH\Helpers\jwt_helper.php(3): require_once()
+ 2 SYSTEMPATH\Common.php(643): include_once('C:\\xampp\\htdocs\\c4\\app\\Helpers\\jwt_helper.php')
+ 3 APPPATH\Controllers\AuthController.php(35): helper([...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AuthController->doLogin()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-01 18:58:38 --> InvalidArgumentException: key must be a string when using hmac
+[Method: POST, Route: auth/doLogin]
+in APPPATH\Libraries\JWT.php on line 259.
+ 1 APPPATH\Libraries\JWT.php(229): Firebase\JWT\JWT::sign('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5b3VyZG9tYWluLmNvbSIsImF1ZCI6InlvdXJkb21haW4uY29tIiwiaWF0IjoxNzQ2MTI1OTE4LCJleHAiOjE3NDYxMjk1MTgsImRhdGEiOnsiaWQiOiIyIiwidXNlcm5hbWUiOiJrcmlzaCJ9fQ', false, 'HS256')
+ 2 APPPATH\Helpers\jwt_helper.php(19): Firebase\JWT\JWT::encode([...], false, 'HS256')
+ 3 APPPATH\Controllers\AuthController.php(44): getJWT([...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AuthController->doLogin()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-01 19:01:22 --> Error: Class "JWT" not found
+[Method: POST, Route: auth/doLogin]
+in APPPATH\Helpers\jwt_helper.php on line 19.
+ 1 APPPATH\Controllers\AuthController.php(44): getJWT([...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AuthController->doLogin()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-01 19:01:55 --> Error: Class "JWT" not found
+[Method: POST, Route: auth/doLogin]
+in APPPATH\Helpers\jwt_helper.php on line 19.
+ 1 APPPATH\Controllers\AuthController.php(44): getJWT([...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AuthController->doLogin()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-01 19:02:19 --> Error: Class "App\Libraries\JWT" not found
+[Method: POST, Route: auth/doLogin]
+in APPPATH\Helpers\jwt_helper.php on line 19.
+ 1 APPPATH\Controllers\AuthController.php(44): getJWT([...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AuthController->doLogin()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-01 19:02:21 --> Error: Class "App\Libraries\JWT" not found
+[Method: POST, Route: auth/doLogin]
+in APPPATH\Helpers\jwt_helper.php on line 19.
+ 1 APPPATH\Controllers\AuthController.php(44): getJWT([...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AuthController->doLogin()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-01 19:03:17 --> ErrorException: require_once(C:\xampp\htdocs\c4\app\Libraries/JWT/BeforeValidException.php): Failed to open stream: No such file or directory
+[Method: POST, Route: auth/doLogin]
+in APPPATH\Helpers\jwt_helper.php on line 5.
+ 1 APPPATH\Helpers\jwt_helper.php(5): CodeIgniter\Debug\Exceptions->errorHandler(2, 'require_once(C:\\xampp\\htdocs\\c4\\app\\Libraries/JWT/BeforeValidException.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\c4\\app\\Helpers\\jwt_helper.php', 5)
+ 2 APPPATH\Helpers\jwt_helper.php(5): require_once()
+ 3 SYSTEMPATH\Common.php(643): include_once('C:\\xampp\\htdocs\\c4\\app\\Helpers\\jwt_helper.php')
+ 4 APPPATH\Controllers\AuthController.php(35): helper([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AuthController->doLogin()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-01 19:03:30 --> Error: Class "Libraries\JWT" not found
+[Method: POST, Route: auth/doLogin]
+in APPPATH\Helpers\jwt_helper.php on line 19.
+ 1 APPPATH\Controllers\AuthController.php(44): getJWT([...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AuthController->doLogin()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-01 19:04:05 --> Error: Class "App\Libraries\JWT" not found
+[Method: POST, Route: auth/doLogin]
+in APPPATH\Helpers\jwt_helper.php on line 19.
+ 1 APPPATH\Controllers\AuthController.php(44): getJWT([...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AuthController->doLogin()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-01 19:06:09 --> InvalidArgumentException: key must be a string when using hmac
+[Method: POST, Route: auth/doLogin]
+in APPPATH\Libraries\JWT.php on line 259.
+ 1 APPPATH\Libraries\JWT.php(229): App\Libraries\JWT::sign('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5b3VyZG9tYWluLmNvbSIsImF1ZCI6InlvdXJkb21haW4uY29tIiwiaWF0IjoxNzQ2MTI2MzY5LCJleHAiOjE3NDYxMjk5NjksImRhdGEiOnsiaWQiOiIyIiwidXNlcm5hbWUiOiJrcmlzaCJ9fQ', false, 'HS256')
+ 2 APPPATH\Helpers\jwt_helper.php(19): App\Libraries\JWT::encode([...], false, 'HS256')
+ 3 APPPATH\Controllers\AuthController.php(44): getJWT([...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AuthController->doLogin()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-01 19:06:50 --> InvalidArgumentException: key must be a string when using hmac
+[Method: POST, Route: auth/doLogin]
+in APPPATH\Libraries\JWT.php on line 259.
+ 1 APPPATH\Libraries\JWT.php(229): App\Libraries\JWT::sign('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5b3VyZG9tYWluLmNvbSIsImF1ZCI6InlvdXJkb21haW4uY29tIiwiaWF0IjoxNzQ2MTI2NDEwLCJleHAiOjE3NDYxMzAwMTAsImRhdGEiOnsiaWQiOiIyIiwidXNlcm5hbWUiOiJrcmlzaCJ9fQ', false, 'HS256')
+ 2 APPPATH\Helpers\jwt_helper.php(19): App\Libraries\JWT::encode([...], false, 'HS256')
+ 3 APPPATH\Controllers\AuthController.php(44): getJWT([...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AuthController->doLogin()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-01 19:06:52 --> InvalidArgumentException: key must be a string when using hmac
+[Method: POST, Route: auth/doLogin]
+in APPPATH\Libraries\JWT.php on line 259.
+ 1 APPPATH\Libraries\JWT.php(229): App\Libraries\JWT::sign('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5b3VyZG9tYWluLmNvbSIsImF1ZCI6InlvdXJkb21haW4uY29tIiwiaWF0IjoxNzQ2MTI2NDEyLCJleHAiOjE3NDYxMzAwMTIsImRhdGEiOnsiaWQiOiIyIiwidXNlcm5hbWUiOiJrcmlzaCJ9fQ', false, 'HS256')
+ 2 APPPATH\Helpers\jwt_helper.php(19): App\Libraries\JWT::encode([...], false, 'HS256')
+ 3 APPPATH\Controllers\AuthController.php(44): getJWT([...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AuthController->doLogin()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-01 19:08:19 --> ErrorException: Undefined variable $envKey
+[Method: POST, Route: auth/doLogin]
+in APPPATH\Helpers\jwt_helper.php on line 11.
+ 1 APPPATH\Helpers\jwt_helper.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $envKey', 'C:\\xampp\\htdocs\\c4\\app\\Helpers\\jwt_helper.php', 11)
+ 2 APPPATH\Controllers\AuthController.php(44): getJWT([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AuthController->doLogin()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
