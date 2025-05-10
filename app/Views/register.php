@@ -70,13 +70,6 @@
 </div>
 
 
-    <!-- <h2>Register</h2>
-    <form action="<?= base_url('auth/saveRegister') ?>" method="post">
-        <label>Username:</label><br>
-        <input type="text" name="username"><br><br>
-        <label>Password:</label><br>
-        <input type="password" name="password"><br><br>
-        <button type="submit">Register</button>
-    </form> -->
+  
 </body>
 </html>
